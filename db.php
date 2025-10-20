@@ -16,7 +16,8 @@ try {
     $pdo = new PDO($dsn, $user, $pass, $options);
 } catch (PDOException $exception) {
     http_response_code(500);
-    echo '<h1>Unable to connect to the database</h1>';
-    echo '<p>' . htmlspecialchars($exception->getMessage(), ENT_QUOTES, 'UTF-8') . '</p>';
+    $dbError = $exception->getMessage();
+    require_once __DIR__ . '/includes/functions.php';
+    include __DIR__ . '/includes/db_error.php';
     exit;
 }
