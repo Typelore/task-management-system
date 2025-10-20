@@ -46,6 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -55,6 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body class="auth-page">
     <div class="auth-wrapper">
         <section class="auth-intro">
@@ -73,30 +75,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
             <h2>Welcome back</h2>
             <p>Sign in to continue coordinating tasks.</p>
-        <?php if ($registeredMessage): ?>
-            <div class="alert success"><?= sanitize($registeredMessage); ?></div>
-        <?php endif; ?>
-        <?php if ($errors): ?>
-            <div class="alert error"><?= implode('<br>', array_map('sanitize', $errors)); ?></div>
-        <?php endif; ?>
-        <form method="post" class="classic-form" novalidate>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" value="<?= sanitize($email); ?>" required>
+            <?php if ($registeredMessage): ?>
+                <div class="alert success"><?= sanitize($registeredMessage); ?></div>
+            <?php endif; ?>
+            <?php if ($errors): ?>
+                <div class="alert error"><?= implode('<br>', array_map('sanitize', $errors)); ?></div>
+            <?php endif; ?>
+            <form method="post" class="classic-form" novalidate>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" value="<?= sanitize($email); ?>" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="primary-action">Sign in</button>
+                </div>
+            </form>
+            <div class="auth-actions">
+                <span class="auth-note">Need an account?</span>
+                <a href="register.php" class="ghost-action">Create one</a>
             </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <div class="form-actions">
-                <button type="submit" class="primary-action">Sign in</button>
-            </div>
-        </form>
-        <div class="auth-actions">
-            <span class="auth-note">Need an account?</span>
-            <a href="register.php" class="ghost-action">Create one</a>
-        </div>
         </div>
     </div>
 </body>
+
 </html>
