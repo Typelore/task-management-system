@@ -1,0 +1,21 @@
+# TODO: Apply PR #18 Changes to Local Repo and Push to GitHub
+
+- [x] Stash current uncommitted changes (includes/header.php, login.php, register.php)
+- [x] Fetch pull request #18 from upstream repository (aboallan/tatarwar)
+- [x] Merge the PR changes into the local main branch
+- [x] Restore (pop) the stashed changes
+- [x] Resolve any merge conflicts if they occur (auto-merged successfully)
+- [x] Push the updated main branch to origin (Typelore/me)
+- [x] Verify the changes and test the application if possible (status checked, uncommitted changes remain as expected)
+- [x] Start local server (MAMP)
+- [x] Launch browser at http://localhost:8888 (server responding with 200)
+- [x] Test index.php page load and basic navigation (HTTP 200)
+- [x] Test login.php page load and form interaction (HTTP 200)
+- [x] Test register.php page load and form interaction (HTTP 200)
+- [x] Test tasks.php page load and functionality (HTTP 302 - redirects as expected for auth)
+- [x] Test calendar.php page load and functionality (HTTP 302 - redirects as expected for auth)
+- [x] Test reminders.php page load and functionality (HTTP 302 - redirects as expected for auth)
+- [x] Test departments.php page load and functionality (HTTP 302 - redirects as expected for auth)
+- [x] Test task_create.php page load and form interaction (HTTP 302 - redirects as expected for auth)
+- [x] Test send_reminder.php page load and functionality (HTTP 403 - access denied as expected)
+- [x] Test logout.php functionality (HTTP 302 - redirects as expected)
