@@ -25,16 +25,27 @@ Tech Stack
 * MySQL
 
 Project Structure
+Atheer_Portfolio/
 ├── assets/
 │   ├── css/
+│   │   └── style.css
 │   └── js/
+│       └── app.js
 ├── database/
+│   └── schema.sql
 ├── includes/
+│   ├── footer.php
+│   ├── functions.php
+│   └── header.php
 ├── calendar.php
 ├── departments.php
 ├── index.php
 ├── login.php
+├── logout.php
 ├── reminders.php
+├── register.php
+├── send_reminder.php
+├── task_create.php
 ├── tasks.php
 └── README.md
 Design
