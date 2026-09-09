@@ -1,43 +1,129 @@
-README
 Task Management · Hail Region Municipality
 
-A classic, data-focused portal for coordinating departmental work. The interface uses HTML, CSS, and vanilla JavaScript, while PHP powers the backend against a MySQL database (fully compatible with MAMP on macOS).
+A classic, data-focused task management portal designed to coordinate departmental work for the Hail Region Municipality.
 
-Key features
+The interface is built with HTML, CSS, and Vanilla JavaScript, while PHP powers the backend with a MySQL database. The project is fully compatible with MAMP on macOS.
 
-Secure authentication with role selection for Presidents, Managers, and Employees.
-Dashboard with concise metrics, upcoming deadlines, and reminder history laid out in a classic two-column view.
-Dedicated task creation workspace plus a streamlined task roster with inline status updates and reminder triggers.
-Calendar view that visualises deadlines across departments with colour-coded priorities and monthly quick stats.
-Department directory with optional contacts and workload summaries, seeded with the fourteen provided departments.
-Reminder management page to create follow-up notices and review the log in a separate hub.
+⸻
+
+Key Features
+
+* Secure Authentication
+    Role-based authentication for Presidents, Managers, and Employees.
+* Dashboard
+    A concise overview of key metrics, upcoming deadlines, and reminder history presented in a classic two-column layout.
+* Task Management
+    Dedicated task creation workspace with a streamlined task roster, inline status updates, and reminder triggers.
+* Calendar
+    Monthly calendar view for visualising departmental deadlines with colour-coded priorities and quick monthly statistics.
+* Department Directory
+    Centralised directory containing department information, optional contact details, and workload summaries for the fourteen provided departments.
+* Reminder Management
+    Dedicated reminder hub for creating follow-up notices and reviewing reminder history.
+
+⸻
+
 Requirements
 
-PHP 8 or newer.
-MySQL server (the default MAMP database works great).
-Web server such as Apache bundled with MAMP.
-Getting started with MAMP
+Before running the project, make sure you have:
 
-Copy the project into your MAMP web directory (typically /Applications/MAMP/htdocs).
-Open phpMyAdmin through http://localhost/phpMyAdmin.
-Import the database schema located at database/schema.sql. It creates tables, seeds departments, tasks, calendar events, notifications, and three demo user accounts.
-Update the connection values in db.php if your credentials differ. The defaults are:
+* PHP 8.0 or newer
+* MySQL
+* Apache or another compatible web server
+* MAMP on macOS
+
+⸻
+
+Getting Started with MAMP
+
+1. Copy the Project
+
+Place the project inside your MAMP web directory:
+
+/Applications/MAMP/htdocs
+
+2. Open phpMyAdmin
+
+Open:
+
+http://localhost/phpMyAdmin
+
+3. Import the Database
+
+Import the database schema located at:
+
+database/schema.sql
+
+The schema creates the required tables and seeds:
+
+* Departments
+* Tasks
+* Calendar events
+* Notifications
+* Three demo user accounts
+
+4. Configure the Database
+
+Open:
+
+db.php
+
+Update the connection values if your MySQL credentials differ.
+
+The default MAMP credentials are:
+
 Username: root
 Password: root
 Database: task_manager
-Start MAMP servers and visit http://localhost/tatarwar/login.php (or the folder name you chose).
-Sign in with one of the seeded accounts or create a new one from the registration page.
-President: president@hailtasks.test / president123
-Manager: manager@hailtasks.test / manager123
-Employee: employee@hailtasks.test / employee123
-Database structure
 
-users: authentication table with role, hashed password, and audit timestamps.
-departments: stores department names and optional email contacts.
-tasks: tracks task details, responsible department, priority, status, and due date.
-notifications: records reminder messages tied to tasks.
-calendar_events: stores calendar items that power the monthly schedule view.
-Project structure
+5. Start the Application
+
+Start the Apache and MySQL servers through MAMP.
+
+Then open:
+
+http://localhost/tatarwar/login.php
+
+If you used a different project folder name, replace tatarwar with your folder name.
+
+6. Sign In
+
+You can sign in using one of the seeded accounts or create a new account through the registration page.
+
+Demo Accounts
+
+Role	Email	Password
+President	president@hailtasks.test	president123
+Manager	manager@hailtasks.test	manager123
+Employee	employee@hailtasks.test	employee123
+
+⸻
+
+Database Structure
+
+users
+
+Authentication table containing user roles, hashed passwords, and audit timestamps.
+
+departments
+
+Stores department names and optional email contact information.
+
+tasks
+
+Tracks task details, responsible departments, priorities, statuses, and due dates.
+
+notifications
+
+Stores reminder messages associated with tasks.
+
+calendar_events
+
+Stores calendar items used to populate the monthly schedule view.
+
+⸻
+
+Project Structure
 
 .
 ├── assets
@@ -63,14 +149,60 @@ Project structure
 ├── task_create.php
 ├── tasks.php
 └── README.md
-Classic design accents
 
-Gradient shell: requested linear gradient background paired with frosted surfaces for a timeless control room aesthetic.
-Summary cards & tables: reusable cards and elevated tables keep numbers, statuses, and priorities easy to scan.
-Dedicated hubs: separate screens for reminders and task creation make navigation straightforward while keeping the layout tidy.
-Responsive layout: collapses gracefully on smaller screens while preserving the primary navigation and KPI highlights.
-Customisation tips
+⸻
 
-Adjust typography, spacing, or palette inside assets/css/style.css to match your brand.
-Extend reminder delivery in send_reminder.php to trigger emails, SMS, or chat integrations.
-Capture additional metadata by expanding the forms in task_create.php or departments.php and updating the schema accordingly.
+Classic Design Accents
+
+Gradient Shell
+
+A linear gradient background combined with frosted surfaces creates a timeless control-room aesthetic.
+
+Summary Cards & Tables
+
+Reusable cards and elevated tables keep metrics, statuses, and priorities easy to scan.
+
+Dedicated Hubs
+
+Separate screens for reminders and task creation provide straightforward navigation while keeping the interface organised.
+
+Responsive Layout
+
+The layout adapts gracefully to smaller screens while preserving the primary navigation and key performance indicators.
+
+⸻
+
+Customisation Tips
+
+Styling
+
+Adjust typography, spacing, and colour palettes inside:
+
+assets/css/style.css
+
+to match your preferred branding.
+
+Reminder Integrations
+
+Extend:
+
+send_reminder.php
+
+to support external notification services such as:
+
+* Email
+* SMS
+* Chat integrations
+
+Additional Metadata
+
+Add new fields to the forms in:
+
+task_create.php
+departments.php
+
+and update:
+
+database/schema.sql
+
+accordingly.
