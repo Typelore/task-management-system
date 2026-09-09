@@ -25,7 +25,6 @@ Tech Stack
 * MySQL
 
 Project Structure
-
 ├── assets/
 │   ├── css/
 │   └── js/
@@ -38,7 +37,6 @@ Project Structure
 ├── reminders.php
 ├── tasks.php
 └── README.md
-
 Design
 
 The interface follows a classic administrative dashboard aesthetic, combining:
