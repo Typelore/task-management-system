@@ -105,7 +105,7 @@ task-management/
 ├── task_create.php
 ├── tasks.php
 └── README.md
-
+```
 The project follows a modular structure, separating frontend assets, database files, reusable PHP components, and application pages.
 
 ⸻
