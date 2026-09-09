@@ -122,10 +122,9 @@ calendar_events
 Stores calendar items used to populate the monthly schedule view.
 
 ⸻
+## Project Structure
 
-Project Structure
-
-.
+```text
 ├── assets
 │   ├── css
 │   │   └── style.css
@@ -149,7 +148,18 @@ Project Structure
 ├── task_create.php
 ├── tasks.php
 └── README.md
+```
 
+## Classic Design Accents
+
+### Gradient Shell
+A linear gradient background combined with frosted surfaces creates a timeless control-room aesthetic.
+
+### Summary Cards & Tables
+Reusable cards and elevated tables keep metrics, statuses, and priorities easy to scan.
+
+### Dedicated Flows
+Separate screens for reminders and task creation provide straightforward navigation while keeping the interface organised.
 ⸻
 
 Classic Design Accents
